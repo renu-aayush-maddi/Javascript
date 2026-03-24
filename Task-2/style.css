@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.calc {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#display {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+button {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}

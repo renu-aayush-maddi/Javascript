@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+#container {
+    width: 400px;
+    margin: auto;
+}
+
+.card {
+    background: lightgray;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+#loading {
+    display: none;
+}

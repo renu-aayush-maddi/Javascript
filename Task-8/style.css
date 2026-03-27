@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+}
+
+#content {
+    margin-top: 100px;
+}

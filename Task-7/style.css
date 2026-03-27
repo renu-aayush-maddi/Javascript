@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+#chatBox {
+    width: 300px;
+    height: 400px;
+    border: 1px solid rgb(8, 8, 8);
+    margin: 20px auto;
+}
+.time {
+    font-size: 10px;
+    color: gray;
+}

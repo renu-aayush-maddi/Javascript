@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    width: 200px;
+    margin: auto;
+}
+
+li {
+    padding: 10px;
+    margin: 5px;
+    background: lightgray;
+    cursor: grab;
+}

@@ -7,9 +7,9 @@ function time() {
     return d.getHours()+":"+d.getMinutes()
 }
 
-function addMessage(text) {
+function addMessage(text,type) {
 chatBox.innerHTML +=
-    `<div class="msg">
+    `<div class="msg ${type}">
         ${text}
     <div class="time">${time()}
     </div>
@@ -18,9 +18,9 @@ chatBox.innerHTML +=
 
 function sendMessage() {
     let text = input.value
-    addMessage(text)
+    addMessage(text,"user")
     input.value = "";
-setTimeout(() => {addMessage("Reply:"+text)},1000)
+setTimeout(() => {addMessage("Reply:"+text,"bot")},1000)
 }
 
 send.addEventListener("click",sendMessage);

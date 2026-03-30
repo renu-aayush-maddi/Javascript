@@ -11,3 +11,16 @@ body {
     font-size: 10px;
     color: gray;
 }
+.msg {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.user {
+    background-color: lightblue;
+    text-align: right;
+}
+.bot {
+    background-color: lightgreen;
+    text-align: left;
+}

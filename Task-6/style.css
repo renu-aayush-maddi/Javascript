@@ -14,3 +14,12 @@ li {
     background: lightgray;
     cursor: grab;
 }
+
+li.dragging {
+    background: lightblue;
+
+}
+
+li.dropped {
+    background: lightcoral;
+}

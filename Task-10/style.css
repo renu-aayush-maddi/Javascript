@@ -1,7 +1,8 @@
 body {
     text-align: center;
 }
-#products,#cart {
+
+#products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,4 +18,19 @@ body {
 img {
     width: 100px;
     height: 100px;
+}
+
+.container {
+    display: flex;
+}
+
+.filters {
+    width: 180px;
+    padding: 10px;
+    text-align: left;
+    border-right: 4px solid black;
+}
+
+#cart div {
+    margin: 5px 0;
 }

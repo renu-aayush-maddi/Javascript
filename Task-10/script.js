@@ -11,6 +11,43 @@ let cart = JSON.parse(localStorage.getItem("cart")) || []
 let cartDiv = document.getElementById("cart")
 let totalDiv = document.getElementById("total")
 
+let searchInput = document.getElementById("search")
+let checkboxes = document.querySelectorAll("input[type='checkbox']")
+
+function debounce(fn,delay) {
+    let timer
+    return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => fn(), delay)
+    }
+}
+
+function filterProducts() {
+    let search = searchInput.value.toLowerCase()
+
+    let selected = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value)
+
+    let cards = document.querySelectorAll(".card")
+
+    cards.forEach(card => {
+        let name = card.dataset.name
+
+        let matchSearch = name.includes(search)
+        let matchCategory = selected.length === 0 || selected.includes(name)
+
+        if (matchSearch && matchCategory) {
+            card.style.display = "block"
+        } else {
+            card.style.display = "none"
+        }
+    })
+}
+
+let debouncedFilter = debounce(filterProducts,300)
+
+searchInput.addEventListener("input", debouncedFilter)
+checkboxes.forEach(cb => cb.addEventListener("change", filterProducts))
+
 function addToCart(id) {
     let item = cart.find(x => x.id == id)
     if (item) item.qty++

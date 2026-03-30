@@ -7,55 +7,64 @@
 
 <h2>Products</h2>
 
+<input type="text" id="search" placeholder="Search product">
+
+<div class="container">
+        <div class="filters">
+        <h4>Products</h4>
+        <label><input type="checkbox" value="phone">Phone</label><br>
+        <label><input type="checkbox" value="shoes">Shoes</label><br>
+        <label><input type="checkbox" value="watch">Watch</label><br>
+        <label><input type="checkbox" value="laptop">Laptop</label><br>
+        <label><input type="checkbox" value="denim jacket">Jacket</label><br>
+        <label><input type="checkbox" value="headphones">Headphones</label>
+        </div>
+
 <div id="products">
 
-<div class="card">
+<div class="card" data-name="phone" data-price="10000">
     <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=400">
     <h4>Phone</h4>
     <p>₹10000</p>
     <button onclick="addToCart(1)">Add</button>
 </div>
 
-<div class="card">
+<div class="card" data-name="shoes" data-price="2000">
     <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400">
     <h4>Shoes</h4>
     <p>₹2000</p>
     <button onclick="addToCart(2)">Add</button>
 </div>
 
-<div class="card">
+<div class="card" data-name="watch" data-price="3000">
     <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=400">
     <h4>Watch</h4>
     <p>₹3000</p>
     <button onclick="addToCart(3)">Add</button>
 </div>
 
-<div class="card">
+<div class="card" data-name="laptop" data-price="55000">
         <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=400">
         <h4>Laptop</h4>
         <p>₹55000</p>
         <button onclick="addToCart(4)">Add</button>
 </div>
 
-<div class="card">
+<div class="card" data-name="denim jacket" data-price="4500">
     <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?q=80&w=400">
     <h4>Denim Jacket</h4>
     <p>₹4500</p>
     <button onclick="addToCart(5)">Add</button>
 </div>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=400">
-    <h4>Headphones</h4>
-    <p>₹8000</p>
-    <button onclick="addToCart(6)">Add</button>
 </div>
-
 </div>
 
 <h2>Cart</h2>
-<div id="cart"></div>
-<h3 id="total"></h3>
+<div id="cartContainer">
+    <div id="cart"></div>
+    <h3 id="total"></h3>
+</div>
 
 <script src="script.js"></script>
 </body>
